@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the associated IEEE Access article."
+title: "Co-Adaptive Privacy-Compression Allocation: Reproducibility Code"
+authors:
+  - family-names: "Mollanejad"
+    given-names: "Amir"
+doi: "10.5281/zenodo.REPLACE_WITH_FINAL_RECORD"
+date-released: 2026-10-31
+license: MIT

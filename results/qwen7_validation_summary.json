@@ -1,0 +1,21 @@
+{
+  "scope": "Qwen2.5-7B allocation and communication validation; formal DP certificate is separate",
+  "dataset": "MedMCQA official train and validation splits",
+  "model": "Qwen2.5-7B-Instruct",
+  "splits": {"train": 2048, "development": 256, "labeled_holdout": 512, "public_reference": 8},
+  "grid": {"rho": [0.4, 0.6, 0.8], "rank": [16, 32]},
+  "objective": {"lambda1": 8.0, "lambda2": 0.8, "rdp_order": 2.1, "normalized_noise_multiplier": 12.28995836},
+  "results": {
+    "frozen_base": {"correct": 299, "total": 512, "accuracy_percent": 58.3984375, "payload_bytes": 0},
+    "rank32_reference": {"correct": 324, "total": 512, "accuracy_percent": 63.28125, "payload_bytes": 20185088},
+    "rank_only_r16": {"correct": 321, "total": 512, "accuracy_percent": 62.6953125, "payload_bytes": 10092544},
+    "mask_only_r32_rho08": {"correct": 321, "total": 512, "accuracy_percent": 62.6953125, "payload_bytes": 20185088},
+    "joint": {"correct": 319, "total": 512, "accuracy_percent": 62.3046875, "payload_bytes": 10092544, "mean_rank": 16.0, "mean_rho": 0.79642857}
+  },
+  "paired_exact_tests_joint_vs": {
+    "rank_only": {"joint_only_correct": 3, "control_only_correct": 5, "p_two_sided": 0.7265625},
+    "mask_only": {"joint_only_correct": 3, "control_only_correct": 5, "p_two_sided": 0.7265625},
+    "rank32_reference": {"joint_only_correct": 3, "control_only_correct": 8, "p_two_sided": 0.2265625},
+    "frozen_base": {"joint_only_correct": 43, "control_only_correct": 23, "p_two_sided": 0.01865726035402101}
+  }
+}

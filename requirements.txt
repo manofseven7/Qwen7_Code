@@ -1,0 +1,9 @@
+torch>=2.6
+transformers>=4.51
+datasets>=3.5
+peft>=0.15
+accelerate>=1.6
+numpy>=2.0
+scipy>=1.13
+safetensors>=0.5
+pytest>=8.0

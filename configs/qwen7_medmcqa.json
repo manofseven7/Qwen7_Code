@@ -1,0 +1,19 @@
+{
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "dataset": "openlifescienceai/medmcqa",
+  "seed": 3101,
+  "train_n": 2048,
+  "development_n": 256,
+  "holdout_n": 512,
+  "public_reference_n": 8,
+  "max_length": 256,
+  "targets": ["q_proj", "v_proj"],
+  "learning_rate": 0.00005,
+  "reference_rank": 32,
+  "rho_grid": [0.4, 0.6, 0.8],
+  "rank_grid": [16, 32],
+  "lambda_1": 8.0,
+  "lambda_2": 0.8,
+  "rdp_order_for_allocation": 2.1,
+  "normalized_noise_multiplier_for_allocation": 12.28995836
+}
